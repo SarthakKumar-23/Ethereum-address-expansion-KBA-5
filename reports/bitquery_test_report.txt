@@ -1,0 +1,33 @@
+======================================================================
+BITQUERY ADDRESS EXPANSION TEST REPORT
+======================================================================
+
+Objective:
+Evaluate Bitquery as an indexed-data alternative for expanding the existing Ethereum address dataset.
+
+Data source:
+Existing eth_addresses.csv seed dataset.
+
+Bitquery dataset:
+realtime
+
+Important limitation:
+The current Bitquery account does not have access to the archive dataset. Therefore this experiment evaluates recent realtime activity only and does not represent complete historical Ethereum activity.
+
+TEST RESULTS
+----------------------------------------------------------------------
+Seed addresses selected: 10
+Addresses processed: 10
+Relationship rows collected: 176
+Unique new candidate addresses: 40
+
+OUTPUT FILES
+----------------------------------------------------------------------
+Relationships: ./data/output/bitquery_relationships.csv
+Candidates:    ./data/output/bitquery_new_candidates.csv
+Checkpoint:    ./data/checkpoint/bitquery_checkpoint.csv
+
+Interpretation:
+Candidate addresses represent counterparties observed in Bitquery transfer records and are not automatically verified identities. Further validation is required.
+
+======================================================================
